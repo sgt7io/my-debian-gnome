@@ -1,5 +1,7 @@
 ![Debian Logo](images/debian.png) ![Gnome Logo](images/gnome.png)
 
+<a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution-NonCommercial 4.0 International License</a>.
+
 # My Debian Gnome Install
 
 This script is to automate as much as possible the post installation of my Debian system or provide instructions for personalization. It is still a work in progress and as things can be automated they will be moved from this README to the gnomedebianpostinstall.sh script. Obviously you take this repository and modify it to your taste.
