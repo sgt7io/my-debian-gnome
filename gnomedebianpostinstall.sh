@@ -80,14 +80,17 @@ sudo grep GRUB_TIMEOUT /etc/default/grub
 #Install easy theme if you don't want to customize too much
 sudo apt -y install numix-gtk-theme numix-icon-theme-circle
 
-#Enable Snap and Flatpak support
-#Open Software Center and Search for Gnome Software to confirm installation
-sudo apt -y install flatpak
-sudo apt -y install gnome-software-plugin-flatpak
-sudo flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+#Prep for VSCode install
+sudo apt-get install wget gpg
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > packages.microsoft.gpg
+sudo install -D -o root -g root -m 644 packages.microsoft.gpg /etc/apt/keyrings/packages.microsoft.gpg
+sudo sh -c 'echo "deb [arch=amd64,arm64,armhf signed-by=/etc/apt/keyrings/packages.microsoft.gpg] https://packages.microsoft.com/repos/code stable main" > /etc/apt/sources.list.d/vscode.list'
+rm -f packages.microsoft.gpg
 
-#Install VSCode by Flatpak
-sudo flatpak -y install flathub com.visualstudio.code
+#Install VSCode
+sudo apt install apt-transport-https
+sudo apt update
+sudo apt install code
 
 #Switch to X.org as Wayland does not work as work
 #Select System X11 Default at login screen
