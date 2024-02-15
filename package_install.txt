@@ -1,0 +1,1 @@
+vim tmux git tilix neofetch nmap tcpdump curl build-essential dconf-editor debian-reference-en
