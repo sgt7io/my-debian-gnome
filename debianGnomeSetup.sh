@@ -16,8 +16,8 @@ while true; do
     echo '8. Configure swappiness'
     echo '9. Speed up boot time'
     echo '10. Install Numix theme and icons'
-    echo '11. Prep and Install VSCode'
-    echo '12. Execute All'
+    echo '11. Prep and install VSCode'
+    echo '12. Execute all'
     echo '0. Exit'
     echo -n 'Enter the number of your choice: '
     read choice
