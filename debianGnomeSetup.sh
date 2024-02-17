@@ -6,15 +6,18 @@ source $script_dir/functions.sh
 # Menu for selecting the installation steps
 while true; do
     echo 'Please select an option:'
-    echo '1. Update and patch your Debian host (Will be prompted for admin password)'
+    echo '1. Update, install, and remove packages (Will be prompted for root/admin password)'
     echo '2. Create custom directories in your home directory'
     echo '3. Copy wallpapers to your ~/Pictures/wallpapers directory'
-    echo '4. Install packages specified in package_install.txt'
-    echo '5. Remove packages specified in package_remove.txt'
-    echo '6. Customize Gnome settings'
-    echo '7. Customize vimrc file settings'
-    echo '8. '
-    echo '9. Execute All'
+    echo '4. Customize Gnome settings'
+    echo '5. Customize vimrc file settings'
+    echo '6. Install VLC, plugins, and restricted extras'
+    echo '7. Install UFW and enable it'
+    echo '8. Configure swappiness'
+    echo '9. Speed up boot time'
+    echo '10. Install Numix theme and icons'
+    echo '11. Prep and Install VSCode'
+    echo '12. Execute All'
     echo '0. Exit'
     echo -n 'Enter the number of your choice: '
     read choice
@@ -22,6 +25,8 @@ while true; do
     case $choice in
         1)  
             update_debian
+            install_packages
+            remove_packages
             ;; 
             
         2)  
@@ -33,30 +38,54 @@ while true; do
             ;; 
     
         4)  
-            install_packages
+            customize_gnome
             ;;
 
         5)  
-            remove_packages
+            configure_vimrc
             ;;
         
         6)  
-            customize_gnome
+            install_vlc_restricted_extras
             ;;
         
         7) 
-            configure_vimrc
+            install_ufw_enable
             ;;
             
-        8)   
+        8)  
+            configure_swappiness
+            ;;
+            
+        9)  
+            speed_boot_time
+            ;;
+
+        10) 
+            install_numix_theme
+            ;;
+        
+        11) 
+            prep_for_vscode_install
+            install_vscode
+            ;;
+
+        12) 
             update_debian
-            create_directories
-            copy_wallpapers
             install_packages
             remove_packages
+            create_directories
+            copy_wallpapers
             customize_gnome
             configure_vimrc
-            ;;    
+            install_vlc_restricted_extras
+            install_ufw_enable
+            configure_swappiness
+            speed_boot_time
+            install_numix_theme
+            prep_for_vscode_install
+            install_vscode
+            ;;
 
         0)
             echo 'Exiting.'
