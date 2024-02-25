@@ -4,9 +4,10 @@
 
 # My Debian Gnome Install
 
-This script is to automate as much as possible the post installation of my Debian system or provide instructions for personalization. It is still a work in progress and as things can be automated they will be moved from this README to the gnomedebianpostinstall.sh script. Obviously you take this repository and modify it to your taste.
+This script is to automate as much as possible the post installation of my Debian system or provide instructions for personalization. It is still a work in progress and as things can be automated they will be moved from this README to the debianGnomeSetup.sh script. Obviously you take this repository and modify it to your taste.
 
 1. Clone this repository to your home directory.
+
 ```bash
 cd ~
 git clone git@github.com:sgt7io/my-debian-gnome.git
@@ -14,27 +15,26 @@ cd my-debian-gnome
 ```
 
 2. Select additional repositories and switch to fastest update server.
-- Open "Software and Updates" => Debian Software Tab
-   - Select additional repositores under the "Downloadable from the Internet" section.
-   - Under "Download from" and select the best server for your locale.
 
-3. Run the gnomedebianpostinstall.sh script
+- Open "Software and Updates" => Debian Software Tab
+  - Select additional repositores under the "Downloadable from the Internet" section.
+  - Under "Download from" and select the best server for your locale.
+
+3. Run the debianGnomeSetup.sh script
+
 ```bash
-$ chmod 700 gnomedebianpostinstall.sh
-$ ./gnomedebianpostinstall.sh
+$ chmod 700 debianGnomeSetup.sh
+$ ./debianGnomeSetup.sh
 ```
 
 Install Desktop Desktop Icons,and User Themes Extensions
 
 There are numerous themes and icons on the internet, but I simply use the
-easy to install  Numix GTK theme and Numix circle icons.
+easy to install Numix GTK theme and Numix circle icons.
 
 I also use the following wallpaper, which I sourced from [Wallpaper House](https://wallpaper-house.com/wallpaper-id-391811.php "Wallpaper House")
 
 ![Feather Wallpaper](images/wallpaperpreview.png)
-
-
-Open Tweaks => Appearance => Select Numix for applications and Shell and Numix  in icons.
 
 Go to Account Settings and set your user image. This will make your system more personal and more beautiful.
 
@@ -51,7 +51,7 @@ Change LibreOffice look
 
 View => Toolbar Layout => Single Toolbar
 
-Tools =>  Options => View => Style. Select  Colibre icons
+Tools => Options => View => Style. Select Colibre icons
 
 Enable Tray Icons
 
@@ -65,3 +65,8 @@ Firefox Preferences and activate Restore previous session
 
 Firefox DRM Settings
 DRM support select enable
+
+Before execurting all the steps I personall switch to X.org as Wayland does not work as well in my opinion, but your experience may vary.
+Prior to logging in select System X11 Default at login screen.
+You can can verify from the terminal once you log in.
+ps -e | grep X
