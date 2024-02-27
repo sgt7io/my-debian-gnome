@@ -21,7 +21,7 @@ $ chmod 700 debianGnomeSetup.sh
 $ ./debianGnomeSetup.sh
 ```
 
-## Install Desktop Desktop Icons,and User Themes Extensions
+**Install Desktop Desktop Icons,and User Themes Extensions**
 
 There are numerous themes and icons on the internet, but I simply use the
 easy to install Numix GTK theme and Numix circle icons.
@@ -32,11 +32,11 @@ I also use the following wallpaper, which I sourced from [Wallpaper House](https
 
 ## After I run the scripts I currently perform the following steps manually:
 
-## Personalization
+**Personalization**
 
 - Go to Settings => Users => and set your user image if you want your system a little more personal.
 
-## Add Shortcuts
+**Add Shortcuts**
 
 - Terminal shortcut
 
@@ -56,7 +56,7 @@ I also use the following wallpaper, which I sourced from [Wallpaper House](https
 
   - Tools => Options => View => Icon Theme. Select Colibre icons from the drop down and select Apply.
 
-## Enable Gnome Shell Extensions
+**Enable Gnome Shell Extensions**
 
 https://extensions.gnome.org/
 
@@ -64,15 +64,15 @@ https://extensions.gnome.org/
 
   - I add Dash to Dock in order to have a more personalized dock
 
-## Enable Nightlight
+**Enable Nightlight**
 
 - Settings => Display => and set Night Light on with your desired settings
 
-## Firefox DRM Settings
+**Firefox DRM Settings**
 
 - Under settings search for DRM and select enable
 
-## Switch to X11 from Wayland
+**Switch to X11 from Wayland**
 
 Before executing all the steps I personally switch to X.org as Wayland does not work as well in my opinion, but your experience may vary.
 
