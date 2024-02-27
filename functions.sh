@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-#1sudo 
+#1
 update_debian() {
     sudo apt -y update
     sudo apt -y upgrade
@@ -113,8 +113,3 @@ install_vscode() {
     sudo apt install code
     echo 'VSScode installed successfully!'
 }
-
-#add_repositories() {
-#    sudo cp -p /etc/apt/sources.list /etc/apt/sources.list.original
-#    #sudo sed -i 's/main/main non-free contrib/g' /etc/apt/sources.list
-#}
